@@ -4,7 +4,6 @@
 
 - Docker
 - Docker Compose
-- Go 1.12
 
 ## Start Server
 
@@ -19,17 +18,17 @@ $ sudo docker-compose up -d
 $ tail docker-compose/logs/pd0.log
 ```
 
-## Use PD admin tool
-
-```bash
-$ sudo docker-compose exec pd0 /pd-ctl help
-```
-
 ## Run example codes
 
 ```bash
 $ sudo docker exec -it tikv-sample_playground_1 bash
 
-# cd /source/examples/rawkv
-# go run .
+$ cd /source/examples/rawkv
+$ go run .
+```
+
+## Use PD admin tool
+
+```bash
+$ sudo docker-compose exec pd0 /pd-ctl help
 ```
